@@ -1,0 +1,37 @@
+# 主题基本信息
+name: "LumiNya"
+version: 1.0.0
+description: "二次元毛玻璃风格主题"
+
+# 顶栏标题（支持HTML）
+header_title: '<i class="fas fa-cherry-blossom"></i> LumiNya 的博客 <i class="fas fa-fan"></i>'
+
+# 个人信息（侧边栏）
+avatar: /img/avatar.webp
+nickname: LumiNya
+bio: '一个普通的初中生 · 编程爱好者 · 域名收藏家'
+badges:
+  - icon: fa-tag
+    text: 初中生
+  - icon: fa-code
+    text: 写代码
+  - icon: fa-heart
+    text: 交友
+
+# 社交链接
+social:
+  - icon: fab fa-github
+    url: https://github.com/nekonekos
+  - icon: fab fa-bilibili
+    url: https://space.bilibili.com/1305187259
+  - icon: fas fa-envelope
+    url: mailto:contact@luminya.cc
+
+# 页脚信息
+footer:
+  copyright: "2026 LumiNya"
+  links:
+    - text: 关于
+      url: /
+    - text: 友情链接
+      url: https://luminya.cc

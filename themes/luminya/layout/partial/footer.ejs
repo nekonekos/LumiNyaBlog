@@ -1,0 +1,6 @@
+<footer class="footer">
+  <span><i class="far fa-copyright"></i> <%= theme.footer.copyright %></span>
+  <% theme.footer.links.forEach(function(link) { %>
+  <span><a href="<%= link.url %>"><i class="fas fa-dragon"></i> <%= link.text %></a></span>
+  <% }) %>
+</footer>

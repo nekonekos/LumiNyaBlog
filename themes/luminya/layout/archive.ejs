@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- partial('partial/head') %>
+  <title>归档 | <%= config.title %></title>
+</head>
+<body>
+  <div class="page-wrap">
+    <%- partial('partial/header') %>
+    <div style="display: grid; grid-template-columns: 1fr 300px; gap: 1.5rem;">
+      <main class="glass-card">
+        <h1 class="post-title" style="margin-bottom: 2rem;">📦 归档</h1>
+        <% page.posts.each(function(post) { %>
+        <article style="margin-bottom: 1.5rem; border-bottom: 1px dashed rgba(255,255,255,0.5); padding-bottom: 1rem;">
+          <h3><a href="<%= url_for(post.path) %>" style="color: #003f63;"><%= post.title %></a></h3>
+          <div class="post-meta"><%= date(post.date, 'YYYY-MM-DD') %></div>
+        </article>
+        <% }) %>
+      </main>
+      <aside><%- partial('partial/sidebar') %></aside>
+    </div>
+    <%- partial('partial/footer') %>
+  </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<div class="glass-card profile-card">
+  <div class="avatar">
+    <img src="<%= theme.avatar %>" alt="avatar" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-user-astronaut\'></i>'">
+  </div>
+  <div class="nickname"><%= theme.nickname %></div>
+  <div class="bio"><%= theme.bio %></div>
+  <% if (theme.badges && theme.badges.length) { %>
+  <div class="badge-group">
+    <% theme.badges.forEach(function(badge) { %>
+    <span class="badge-item"><i class="fas <%= badge.icon %>"></i> <%= badge.text %></span>
+    <% }) %>
+  </div>
+  <% } %>
+  <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+    <% theme.social.forEach(function(link) { %>
+    <a href="<%= link.url %>" target="_blank" style="color: #1a76a8; font-size: 1.5rem;"><i class="<%= link.icon %>"></i></a>
+    <% }) %>
+  </div>
+</div>

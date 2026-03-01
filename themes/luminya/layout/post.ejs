@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%- partial('partial/head') %>
+</head>
+<body>
+  <div class="page-wrap">
+    <%- partial('partial/header') %>
+
+    <div style="display: grid; grid-template-columns: 1fr 300px; gap: 1.5rem;">
+      <article class="post-content">
+        <h1 class="post-title"><%= page.title %></h1>
+        <div class="post-meta">
+          <i class="fas fa-calendar-alt"></i> <%= date(page.date, 'YYYY-MM-DD') %>
+          <% if (page.categories && page.categories.length) { %>
+          <i class="fas fa-folder" style="margin-left: 1rem;"></i> <%= page.categories.map(c => c.name).join(', ') %>
+          <% } %>
+        </div>
+        <%- page.content %>
+      </article>
+
+      <aside>
+        <%- partial('partial/sidebar') %>
+      </aside>
+    </div>
+
+    <%- partial('partial/footer') %>
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
